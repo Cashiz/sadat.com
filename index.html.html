@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTSZONE.COM</title>
+    <style>
+        .container{
+            display: inline-block;
+            background: #e3d7d7;
+        }
+        nav{
+            background-color:rgb(0, 255, 64);
+        
+           
+
+        }
+
+        .js-div{
+            background: #ffffff;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            
+        }
+        .img{
+            width: 120px;
+            height: 100px;
+            image-resolution: 1080px;
+        }
+        .js-add-to-cart{
+            background-color: rgb(12, 12, 12);
+            color: greenyellow;
+            margin: 5px;
+            cursor:pointer;
+            border-radius: 10px;
+            
+        }
+        .js-add-to-cart:active{
+            background-color: chartreuse;
+            color: black;
+            transition: 0.1s;
+            shape-outside: 2, 2, 2;
+        }
+        .js-add-to-cart2{
+            background-color: rgb(14, 14, 14);
+            color: rgb(225, 255, 0);
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: rgb(250, 250, 250);
+        }
+        .cart-item-btn{
+            background-color: rgb(0, 0, 0);
+            color: chartreuse;
+            border-radius: 30px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>WELCOME TO YOUR BEST SPORTS SHOP!!!
+            
+        BUY YOUR FAVOURITE SPORTS KITS HERE!!!
+        </h2>
+        <button class="cart-item-btn" onclick="
+
+        if(numberOfItems===0){
+        alert(`You have nothing in your cart`)
+
+        }
+        else if(numberOfItems >=0 ){
+            alert( cartItems);
+        }
+        
+        details()
+        "> VIEW CART ITEMS</button>
+
+        <button class="js-add-to-cart" onclick="
+        numberOfItems=0
+        TotallPrice=0
+       
+        details()
+        ">CLEAR CART</button>
+        
+    </nav> 
+    <!--view cart elements-->
+    <ol class="cart-item"></ol>
+    <ol class="auto-display"></ol>
+    
+    <div class="container">
+            <h2>HERE IS OUR FOOTBALL JESSEY KIT LIST!!</h2> 
+            <div class="js-div">
+           <img class="img" src="imogies/agentina.jpg">
+           <p>Name:<strong> Agentina kit</strong></strong></p>
+           <strong>Price:GH150.00 </strong>
+           
+           <button class="js-add-to-cart" 
+           onclick="
+           numberOfItems +=1;
+           TotallPrice +=150;
+           name ='Agentina kit';
+           price =150.00;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+           
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+           >ADD TO CART</button>
+
+        </div>
+        
+
+        <div class="js-div">
+            <img class="img" src="imogies/world cup2.avif">
+           <p>Name:<strong> Portugal-Agentina in one pack</strong></p>
+           <strong>Price:GH200.00 </strong>
+           
+           <button class="js-add-to-cart" 
+           onclick="
+           numberOfItems +=1;
+           TotallPrice +=200;
+           //name ='Portugal-Agentina in one pack';
+           //price =200.00;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+           
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           ">ADD TO CART</button>
+
+
+        </div>
+
+        <div class="js-div">
+            <img class="img" src="imogies/inter miami.jpg">
+           <p>Name:<strong> Inter Miami Kit</strong></p>
+           <strong>Price:GH150.00 </strong>
+           
+           <button class="js-add-to-cart" 
+           onclick="
+           name='Inter Miami Kit';
+           price=150;
+           numberOfItems +=1;
+           TotallPrice +=150;
+           name ='Portugal-Agentina in one pack';
+           price =150.00;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+           >ADD TO CART</button>
+        </div>
+        
+
+        <div class="js-div">
+            <img class="img" src="imogies/city - Copy.webp">
+            <p>Name:<strong>Man City Kit (Halland)</strong></p>
+            <strong>Price:GH160.00 </strong>
+            <button class="js-add-to-cart" 
+            onclick="
+           name='Man City Kit';
+           price=150;
+           numberOfItems +=1;
+           TotallPrice +=160;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+        </div>
+
+        <div class="js-div">
+            <img class="img" src="imogies/germany - Copy.png">
+            <p>Name:<strong>Germany Kit</strong></p>
+            <strong>Price:GH100.00 </strong>
+            <button class="js-add-to-cart" 
+            onclick="
+           name='Germany Kit';
+           price=100;
+           numberOfItems +=1;
+           TotallPrice +=100;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+
+        </div>
+
+</div> 
+<!--- MY SECOND CONTAINER--> 
+<h1>OTHER SPORTS CATEGORIES ARE AVAILLABLE BELOW</h1>  
+<div class="container">
+    <div class="js-div"> 
+        <img class="img" src="imogies/referee-whistle-isolated-icon-vector_18591-83457.jpg">
+            <p>Name:<strong>REFEREE WHITSLE</strong></p>
+            <strong>Price:GH100.00 </strong>
+            
+            <button class="js-add-to-cart2"
+            onclick="
+           name='Referee Whitsle';
+           price=100;
+           numberOfItems +=1;
+           TotallPrice +=100;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+
+    </div>
+
+    <div class="js-div">
+        <img class="img" src="imogies/product-jpeg.jpg">
+            <p>Name:<strong>BARCAR KIT</strong></p>
+            <strong>Price:GH100.00 </strong>
+            <button class="js-add-to-cart2"  
+            onclick="
+           name='Barca Kit';
+           price=100;
+           numberOfItems +=1;
+           TotallPrice +=100;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+    </div>
+
+    <div class="js-div">
+        <img class="img" src="imogies/sport-amerikanskii_futbol-myach-gazon-razmetka-121156.jpeg">
+            <p>Name:<strong>COCOA BALL</strong></p>
+            <strong>Price:GH120.00 </strong>
+            <button class="js-add-to-cart2" 
+            onclick="
+           name='Cocoa Ball';
+           price=120;
+           numberOfItems +=1;
+           TotallPrice +=120;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+    </div>
+
+    <div class="js-div">
+        <img class="img" src="imogies/sport-butsi-futbol-gazon-obuv-143443.jpeg">
+            <p>Name:<strong>FOOTBALL BOOTS</strong></p>
+            <strong>Price:GH500.00 </strong>
+            <button class="js-add-to-cart2"  
+            onclick="
+           name='Football Boots';
+           price=500;
+           numberOfItems +=1;
+           TotallPrice +=500;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+    </div>
+
+    <div class="js-div"> 
+        <img class="img" src="imogies/sport-basketbol-myach-basketbolnoe_pole-157657.jpeg">
+            <p>Name:<strong>BASKET BALL</strong></p>
+            <strong>Price:GH400.00 </strong>
+            <button class="js-add-to-cart2"  
+            onclick="
+           name='Basket Ball';
+           price=400;
+           numberOfItems +=1;
+           TotallPrice +=400;
+            
+           cartItems = `
+            Number Of Cart Items:${numberOfItems}
+           
+         Totall Price:GH ${TotallPrice}.00
+           `
+           details()
+           "
+            >ADD TO CART</button>
+
+    </div>
+
+
+</div>
+    <script>
+            let numberOfItems = 0;
+            let price =0;
+           const name ='';
+           let cartItems =[]
+           let TotallPrice=0
+        
+    function details(){
+        document.querySelector('.auto-display').innerHTML=`Totall Price:${TotallPrice}
+    Number Of Items:${numberOfItems}`;  
+    JSON.parse(localStorage.getItem('cartItems'));
+
+   localStorage.setItem('cartItems',JSON.stringify(cartItems));
+   console.log(JSON.stringify(cartItems));
+    }
+
+    
+
+   
+    </script>
+</body>
+</html>
